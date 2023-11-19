@@ -1,0 +1,30 @@
+package Basic;
+
+public class countBST {
+	
+	public static int countBST(int h) {
+		int mod=(int) (Math.pow(10, 9)+7);
+		return countBST(h, mod);
+	}
+	
+	public static int countBST(int h, int mod) {
+		if (h ==0 || h==1) {
+			return 1;
+		}
+		int x= countBST(h-1);
+		int y= countBST(h-2);
+		
+		long result1= (long) (x*x);
+		long result2= (long) (2*x*y);
+		
+		int value1= (int) result1 %mod;
+		int value2= (int) result2 %mod ;
+		return (value1+value2)% mod;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(countBST(3));
+
+	}
+
+}

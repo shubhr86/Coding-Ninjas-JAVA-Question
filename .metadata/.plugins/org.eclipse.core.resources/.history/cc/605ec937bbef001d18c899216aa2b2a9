@@ -1,0 +1,45 @@
+package Basic;
+
+public class countBST {
+	
+	public static int countBST(int h) {
+		int mod=(int) Math.pow(10, 9)+7;
+		int storage[]= new int [h+1];
+		
+		return countBST(h, mod,storage);
+	}
+	
+	public static int countBST(int h, int mod, int storage[]) {
+		if (h ==0 || h==1) {
+			return 1;
+		}
+		if (h==2) {
+			return 3;
+		}
+		
+		storage[0]= 1;
+		storage[1]=1;
+		storage[2]=3;
+
+		for (int i=3; i<storage.length;i++) {
+			int x= storage[i-1];
+			int y=storage[i-2];
+			long result1= (long) (x*x);
+			long result2= (long) (2*x*y);
+			int value1= (int) result1 %mod;
+			int value2= (int) result2 %mod ;
+			storage[i]= (value1+value2)% mod;
+		}
+		return storage[h];
+		
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		System.out.println(countBST(7));
+
+	}
+
+}

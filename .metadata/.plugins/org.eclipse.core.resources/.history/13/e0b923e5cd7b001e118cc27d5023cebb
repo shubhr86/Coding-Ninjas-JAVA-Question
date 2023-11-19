@@ -1,0 +1,40 @@
+package Basic_String_Questions;
+
+import java.util.Scanner;
+
+class farmer{
+	int principalAmount;
+	float time;
+	float interestInterest;
+	float simpleInterest;
+	
+	void input() {
+		Scanner s = new Scanner (System.in);
+		System.out.println("Please enter the amount you required");
+		principalAmount= s.nextInt();
+		System.out.println("Please mention time");
+		time= s.nextFloat();
+		interestInterest =8.5f;
+	}
+	void compute() {
+		simpleInterest = (principalAmount *interestInterest * time)/100;
+	}
+	void display() {
+		System.out.println("Sinmple Interest is: "+ simpleInterest);
+	}
+	
+}
+
+public class example2 {
+
+	public static void main(String[] args) {
+		
+		farmer f1= new farmer();
+		f1.input();
+		f1.compute();
+		f1.display();
+		
+
+	}
+
+}

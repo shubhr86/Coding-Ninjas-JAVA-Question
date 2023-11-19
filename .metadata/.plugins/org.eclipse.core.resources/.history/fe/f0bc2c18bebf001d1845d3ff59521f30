@@ -1,0 +1,48 @@
+package Linkedlist;
+
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class printiTHterm {
+	
+	public static node<Integer> takeinput(){
+		node<Integer> head=null, tail=null;
+		Scanner s= new Scanner(System.in);
+		int data = s.nextInt();
+		
+		while(data!= -1){
+			node<Integer> newnode= new node<Integer>(data);
+			if (head !=null) {
+				head=newnode;
+				tail=newnode;
+			}else {
+				tail.next=newnode;
+				tail= newnode;
+			}
+			data=s.nextInt();
+		}
+		return head;
+				
+	}
+	 public static void printIth(node<Integer> head, int i)
+	    {
+	     int count=0;
+	     node<Integer> temp=head;
+	        while(count!=i && temp!=null)
+	        {
+	            temp=temp.next;
+	            count++;
+	        }
+	       if( count==i &&temp!=null)
+	           System.out.println(temp.data);
+	    }
+	
+	
+
+	public static void main(String[] args) {
+		node<Integer> head=	takeinput();
+		
+		printIth(head, 3);
+	}
+
+}

@@ -1,0 +1,62 @@
+package ifelse;
+
+import java.util.Scanner;
+
+//A student will not be allowed to sit in exam if his/her attendence is less than 75%.
+				//Take following input from user
+				//Number of classes held
+				//Number of classes attended.
+				//And print
+				//percentage of class attended
+				//Is student is allowed to sit in exam or not.
+
+		 class student {
+			
+			 int numberOfClasses;
+			 int numberofClassedAttend;
+			 int percentofClasses;
+			 
+			 void userInput() {
+				 Scanner s= new Scanner (System.in);
+				 System.out.println("Number of classes held");
+				 numberOfClasses= s.nextInt();
+				 if (numberOfClasses >=365) {
+					 System.out.println("Please Enter vaild Number of classes held");
+					 return;
+
+				 }else {
+				 System.out.println("Number of classes attend");
+				 numberofClassedAttend= s.nextInt();
+				 if (numberofClassedAttend >=300) {
+					 System.out.println("Please Enter vaild Number of classes attend");
+				 }
+				}
+				 
+			 }
+			 void calculate() {
+				 
+				 percentofClasses= ((numberofClassedAttend *100)/numberOfClasses);
+				 
+			 }
+			 
+			 void print() {
+				 if (percentofClasses <75) {
+					 System.out.println("Sorry! you're not allowed to sit in the exam. Your Attendance % is: "+percentofClasses);
+				 }else {
+				 System.out.println("Hurry! you're allowed to sit in the exam. Your Attendance % is: "+percentofClasses);
+				 	}
+				}
+		}
+
+
+public class student_Exam_Senrio {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		student s1= new student();
+		s1.userInput();
+		s1.calculate();
+		s1.print();
+	}
+
+}

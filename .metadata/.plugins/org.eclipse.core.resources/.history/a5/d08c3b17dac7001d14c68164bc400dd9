@@ -1,0 +1,54 @@
+package stackusingLL;
+
+import java.util.Stack;
+
+public class BalancedBrackets {
+	
+	public static char closingpair(char c) {
+		if (c=='}') {
+			return '{';
+		}
+		if (c==']') {
+			return '[';
+		}
+		if (c==')') {
+			return '(';
+		}
+		return '\0';
+	}
+	
+	public static boolean checkBalanced(String str) {
+		Stack<Character> stack= new Stack<>();
+		for (int i=0;i <str.length();i++) {
+			char c= str.charAt(i);
+			// for open brackets
+			if (c=='{' || c=='(' || c=='[') {
+				stack.push(c);
+			}
+			else if (c=='}' || c==']' || c==')') {
+				if (stack.isEmpty()) {
+					return false;
+				}
+				if (closingpair(c)== stack.peek()) {
+					stack.pop();
+				}
+				else {
+					return false;
+				}
+			}
+			if (stack.isEmpty()) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public static void main(String[] args) {
+		String string = "{";
+			System.out.println(
+			checkBalanced(string));
+	
+
+	}
+
+}

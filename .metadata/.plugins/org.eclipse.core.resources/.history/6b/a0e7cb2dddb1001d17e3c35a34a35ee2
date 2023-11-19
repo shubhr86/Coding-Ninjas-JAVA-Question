@@ -1,0 +1,27 @@
+package Naturalnumber;
+
+public class sumOfDigits {
+	
+	public static int sumOfDigits(int input, int startindex){
+		
+		if (input ==0) {
+			return 1;
+		}
+		int smallans = sumOfDigits(input, startindex-1);
+		return smallans;
+	}
+
+	
+	public static int sumOfDigits(int input){
+		return sumOfDigits(input,0);
+	}
+
+		
+
+	public static void main(String[] args) {
+		int input =12345;
+		System.out.println(sumOfDigits(input));
+
+	}
+
+}

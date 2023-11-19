@@ -1,0 +1,12 @@
+package selftest;
+
+public class lwertoupper {
+
+	public static void main(String[] args) {
+		String str="s hubham kumar";
+		String empty=str.replace("", "");
+		System.out.println(empty);
+	
+	}
+
+}

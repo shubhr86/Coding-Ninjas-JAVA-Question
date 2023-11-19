@@ -1,0 +1,38 @@
+package ifelse;
+
+import java.util.Scanner;
+
+public class discount {
+	
+	
+	public static void discount() {
+		Scanner s = new Scanner (System.in);
+		System.out.println("Please Enter the quantity");
+		int q= s.nextInt();
+		
+		if (q<=1500) {
+			int total= q*180;
+
+			System.out.println("The total cost: "+total);
+		}else {
+			double total= q*180;
+			double discount = (total)*(15.8/100);
+			double cost = total- discount;
+			System.out.println("The total cost 2: "+cost);
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		/*
+		 A shop will give discount of 15.8% if the cost of purchased quantity is more than 1500.
+		Ask user for quantity
+		Suppose, one unit will cost 180.
+		Judge and print total cost for user.
+		
+		*/
+		discount();
+	
+	}
+
+}

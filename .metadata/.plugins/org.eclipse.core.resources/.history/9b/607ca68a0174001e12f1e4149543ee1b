@@ -1,0 +1,64 @@
+package Basic_String_Questions;
+
+public class resverseString {
+	
+	
+	// Cases where we reverse String.
+	
+	/* case1- "pw java" ---> "avaj wp"
+	 * 2- "pwskills java ---> "java pwskills"
+	 * 3- "pwskill java" ---> "avaj llikswp"
+	 */
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// case 1-
+		
+		String s1= "Pw java";
+		String result="";
+		
+		for (int i=s1.length()-1; i>=0; i--) {
+			result+= s1.charAt(i);
+		}
+		System.out.println("case 1 : "+result);
+		
+		
+		// case 2-
+		String s2= "Pwskills java";
+		String result2="";
+		System.out.println("case 2 : "+s2.substring(9, 13)+" "+s2.substring(0, 9));
+
+		// case 2- other way Genral Approach for very test cases
+		
+		
+		String s4= "Pwskills java";
+		String result4="";
+		String arr[]= s4.split(" ");
+		for (int i=arr.length-1; i>=0; i--) {
+			result4+=arr[i] +"";
+		}
+		System.out.println("case 2: Other approach - "+result4);
+		
+		
+		
+		
+		// case 3-
+				String s3= "Pwskills java";
+		
+				String result3="";
+				
+				for (int i=s3.length()-1; i>=0; i--) {
+					result3+=s3.charAt(i);
+				}
+				System.out.println("case 2 : "+result3);
+				
+				
+
+
+	
+	}
+
+	
+
+}

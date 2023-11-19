@@ -1,0 +1,102 @@
+package GusserGame;
+import java.util.*;
+
+class Gusser{
+	int guessNum;
+	int guessingNumber(){
+		System.out.println("Guessor! Kindly Guess the Number");
+		Scanner scan = new Scanner(System.in);
+		guessNum= scan.nextInt();
+		return guessNum;
+	}
+}
+
+//	 Player Object
+
+class Player{
+	int guessNum;
+	int guessingNumber(){		
+		Scanner scan = new Scanner(System.in);
+		
+		
+			System.out.println("Player! Kindly Guess the Number");
+			
+			guessNum= scan.nextInt();
+		return guessNum;
+	}
+}
+
+// Umpire Object
+
+class Umpire{
+	int numFromGuessor;
+	int NumFoomPlayer1;
+	int NumFoomPlayer2;
+	int NumFoomPlayer3;
+	
+	void collectNumFromGuessor(){
+		Gusser g= new Gusser();
+		numFromGuessor =g.guessingNumber();
+		
+	}
+	
+	void collectNumFromPlayers(){
+		Player p1= new Player();
+		Player p2= new Player();
+		Player p3= new Player();
+
+		NumFoomPlayer1= p1.guessingNumber();
+		NumFoomPlayer2= p2.guessingNumber();
+		NumFoomPlayer3= p3.guessingNumber();
+
+	}
+	
+	void compare(){
+		
+		if (numFromGuessor == NumFoomPlayer1) {
+			
+			if (numFromGuessor == NumFoomPlayer2 && numFromGuessor == NumFoomPlayer3) {
+				
+				System.out.println("Hurry!! All Players Guesses Right");
+			}else if (numFromGuessor == NumFoomPlayer2) {
+				
+				System.out.println("Player 1 And 2 Guesses Right");
+			}else if (numFromGuessor == NumFoomPlayer3) {
+				System.out.println("Player 1 And 3 Gusses Right");
+			}else {
+				System.out.println("PLayer 1 Won The Game!");
+			}
+			
+		}else if (numFromGuessor == NumFoomPlayer2) {
+			
+			if (numFromGuessor == NumFoomPlayer3 ) {
+				System.out.println("Player 2 And 3 Guesses Right");
+			}else {
+				System.out.println("PLayer 2 Won The Game!");
+			}
+		}else if (numFromGuessor == NumFoomPlayer3){
+			
+			System.out.println("PLayer 3 Won The Game!");
+			
+		}else {
+			System.out.println("!! GAME LOST !!");
+			
+		}
+	}
+	
+	
+}
+
+
+public class game {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Game Started");
+		Umpire u = new Umpire();
+		u.collectNumFromGuessor();
+		u.collectNumFromPlayers();
+		u.compare();
+	}
+
+}

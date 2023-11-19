@@ -1,0 +1,13 @@
+package selftest;
+
+public class lwertoupper {
+
+	public static void main(String[] args) {
+		String S="s hubham kumar";
+		  S = S.replaceAll("\\s", "");
+	       System.out.println(S);
+	      
+	
+	}
+
+}

@@ -1,0 +1,16 @@
+package string;
+
+public class concat {
+
+	public static void main(String[] args) {
+		String s1= "shubham";
+		String s2="kumar";
+		System.out.println("First Way");
+		System.out.println(s1+s2);
+		System.out.println("Second Way");
+
+		System.out.println(s1.concat(s2));
+
+	}
+
+}

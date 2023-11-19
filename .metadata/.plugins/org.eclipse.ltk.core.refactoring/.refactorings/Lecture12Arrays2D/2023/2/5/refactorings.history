@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;printwave.java&apos; to &apos;Lecture12Arrays2D/src/Arrays2D&apos;&#x0D;&#x0A;- Original project: &apos;Lecture12Arrays2D&apos;&#x0D;&#x0A;- Destination element: &apos;Lecture12Arrays2D/src/Arrays2D&apos;&#x0D;&#x0A;- Original element: &apos;printwave.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;Arrays2D" element1="/src&lt;{printwave.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1675352818680" units="1" version="1.0"/>
+</session>

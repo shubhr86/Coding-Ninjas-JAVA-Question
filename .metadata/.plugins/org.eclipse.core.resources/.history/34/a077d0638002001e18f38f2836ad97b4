@@ -1,0 +1,33 @@
+package selftest;
+
+public class checkString {
+	
+	 public static  boolean check (String s)
+	    {
+	        int count =0;
+	   
+	       for (int i=0; i<s.length(); i++){
+	           for (int j=1; j<s.length(); j++){
+	               if (s.charAt(i)== s.charAt(j)){
+	                   count++;
+	               }
+	           }
+	       }
+	       if(s.length()==1){
+	            return true;
+	        }
+	       if (count!= s.length()){
+	           return false;
+	       }else {
+	           return true;
+	       }
+	    }
+	
+
+	public static void main(String[] args) {
+		String s="gggggggg";
+		System.out.println(check(s));
+
+	}
+
+}

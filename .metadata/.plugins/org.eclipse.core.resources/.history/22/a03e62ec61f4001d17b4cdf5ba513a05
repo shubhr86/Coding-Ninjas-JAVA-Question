@@ -1,0 +1,25 @@
+package DP2;
+
+public class minCholcolate {
+	
+	public static int getMin(int arr[], int n){
+		
+		if (arr.length<=1) {
+			return 1;
+		}
+		if (arr[0]== 1) {
+			return 1+ getMin(arr, n-1);
+		}
+		else {
+			int op1= getMin(arr, n);
+			int op2= getMin(arr, n-1);
+			return 1+ Math.min(op1, op2);
+		}
+	}
+
+	public static void main(String[] args) {
+		int arr[]= {1,4,4,6};
+		System.out.println(getMin(arr, 4));
+	}
+
+}
